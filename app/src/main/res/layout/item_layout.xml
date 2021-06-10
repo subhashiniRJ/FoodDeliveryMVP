@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="10dp"
+    app:contentPadding="5dp"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/white"
+    android:layout_height="wrap_content">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/ivShopImage"
+        app:placeholderImage="@drawable/ic_reception"
+        android:layout_width="80dp"
+        app:roundAsCircle="true"
+        android:layout_margin="5dp"
+        app:roundingBorderColor="@color/cardview_light_background"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvShopName"
+        android:fontFamily="monospace"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:drawablePadding="10dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:drawableLeft="@drawable/ic_baseline_storefront_24"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/black"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivShopImage"
+        app:layout_constraintTop_toTopOf="@+id/ivShopImage" />
+
+    <TextView
+        android:id="@+id/tvShopemail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="monospace"
+        android:layout_marginRight="8dp"
+        android:text="TextView"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/tvPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivShopImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvShopName" />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:text="TextView"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/ic_baseline_phone_in_talk_24"
+        android:textColor="@color/black"
+        android:fontFamily="monospace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivShopImage"
+        app:layout_constraintTop_toBottomOf="@id/tvShopemail" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
